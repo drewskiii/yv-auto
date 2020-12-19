@@ -1,5 +1,5 @@
 ## Function: 
-### Automate liking friend's completed plans on Bible.com from the past day.
+### Automate liking friend's completed plans on Bible.com from the past day using Selenium.
 ## Purpose: 
 ### To support friends on the app by encouraging them through their bible reading plans.
 ## Documentation
