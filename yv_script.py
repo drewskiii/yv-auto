@@ -27,9 +27,9 @@ class YVAutomation:
 
     def __init__(self):
         load_dotenv()
-        chrome_options = Options()
-        chrome_options.add_experimental_option("detach", True)
-        self.driver = webdriver.Chrome(chrome_options=chrome_options)
+        options = Options()
+        options.add_experimental_option("detach", True)
+        self.driver = webdriver.Chrome(options=options)
 
     def login(self):
         self.driver.get(self.URL)
@@ -51,7 +51,7 @@ class YVAutomation:
         self.driver.switch_to.window(main_page)
 
     def verify_main_page(self):
-        like_button_selector = "#current-ui-view > div > div > div:nth-child(1) > div > div.moment-bottom > div.moment-actions > a"
+        like_button_selector = "#current-ui-view > div > div > div.ng-scope > div.moment.moment-vod"
         test = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, like_button_selector))
         )
